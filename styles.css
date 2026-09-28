@@ -1,0 +1,121 @@
+:root {
+  --bg: #ffffff;
+  --fg: #1a1a2e;
+  --muted: #5b5b6e;
+  --brand: #5b3df5;
+  --brand-dark: #472fd1;
+  --card: #f4f3ff;
+  --border: #e2e0f5;
+  --radius: 12px;
+  --max: 960px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.6;
+}
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 1rem; }
+
+.topbar {
+  position: sticky; top: 0; z-index: 10;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+.topbar-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  min-height: 56px;
+}
+.brand { font-weight: 800; font-size: 1.25rem; color: var(--brand); text-decoration: none; }
+.nav { display: flex; gap: 1rem; }
+.nav a { color: var(--fg); text-decoration: none; }
+.nav a:hover, .nav a:focus-visible { color: var(--brand); text-decoration: underline; }
+.menu-btn { display: none; background: none; border: 1px solid var(--border); border-radius: 8px; padding: .3rem .6rem; font-size: 1.1rem; }
+
+.hero { padding: 3rem 1rem 2rem; }
+.hero h1 { font-size: clamp(1.8rem, 5vw, 2.8rem); line-height: 1.15; margin: 0 0 1rem; }
+.lead { font-size: 1.1rem; color: var(--muted); max-width: 60ch; }
+.badges { color: var(--muted); font-size: .9rem; }
+
+.section { padding: 2rem 1rem; }
+.section h2 { margin-top: 0; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.1rem; }
+.card h3 { margin: 0 0 .4rem; font-size: 1.05rem; }
+.card p { margin: 0; color: var(--muted); }
+
+.models { padding-left: 1.2rem; }
+.models li { margin-bottom: .4rem; }
+.muted { color: var(--muted); }
+
+.highlight { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); }
+.highlight ul { padding-left: 1.2rem; }
+
+.cta-row { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1.2rem 0; }
+.btn {
+  display: inline-block; padding: .65rem 1.2rem;
+  border-radius: 999px; border: 1px solid var(--brand);
+  color: var(--brand); text-decoration: none; font-weight: 600;
+}
+.btn.primary { background: var(--brand); color: #fff; }
+.btn.primary:hover, .btn.primary:focus-visible { background: var(--brand-dark); }
+.btn:hover, .btn:focus-visible { text-decoration: underline; }
+
+.footer { border-top: 1px solid var(--border); margin-top: 2rem; }
+.footer-inner {
+  display: flex; flex-wrap: wrap; gap: .5rem 1.5rem;
+  align-items: center; justify-content: space-between;
+  padding-top: 1rem; padding-bottom: 1rem;
+  color: var(--muted); font-size: .9rem;
+}
+.footer nav { display: flex; gap: 1rem; }
+.footer a { color: var(--brand); }
+
+.prose { max-width: 70ch; }
+.prose h1 { font-size: 1.9rem; }
+.prose h2 { margin-top: 2rem; font-size: 1.25rem; }
+.prose table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .95rem; }
+.prose th, .prose td { border: 1px solid var(--border); padding: .5rem .6rem; text-align: left; vertical-align: top; }
+.prose th { background: var(--card); }
+
+.form { display: grid; gap: .9rem; max-width: 560px; }
+.field { display: grid; gap: .3rem; }
+.field label { font-weight: 600; }
+.field input, .field select, .field textarea {
+  font: inherit; padding: .6rem .7rem;
+  border: 1px solid var(--border); border-radius: 8px; background: #fff; color: var(--fg);
+}
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible,
+a:focus-visible, button:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+.error { color: #b00020; font-size: .9rem; min-height: 1.2em; }
+.steps { padding-left: 1.2rem; }
+.steps li { margin-bottom: .5rem; }
+
+@media (max-width: 640px) {
+  .menu-btn { display: block; }
+  .nav {
+    display: none; position: absolute; top: 56px; left: 0; right: 0;
+    flex-direction: column; background: var(--bg);
+    border-bottom: 1px solid var(--border); padding: .75rem 1rem 1rem;
+  }
+  .nav.open { display: flex; }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12121a; --fg: #f0efff; --muted: #b9b7d6;
+    --card: #1d1d2b; --border: #33334d;
+  }
+  .field input, .field select, .field textarea { background: #1d1d2b; }
+}
+
+@media print {
+  .topbar, .footer, .cta-row, .menu-btn { display: none; }
+  body { color: #000; }
+}

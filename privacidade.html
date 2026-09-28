@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Política de privacidade do SuperVoice — app de texto em fala e clonagem de voz que não mantém nem compartilha vozes em servidor.">
+  <title>SuperVoice — Política de privacidade</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="index.html">SuperVoice</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <nav class="nav" id="mainNav" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="exclusao.html">Excluir dados</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap section prose">
+    <h1>Política de privacidade — SuperVoice</h1>
+    <p><strong>Vigência:</strong> 28 de setembro de 2026. <strong>Contato:</strong> granprixtrivia@gmail.com</p>
+    <p>O SuperVoice é um app Android de texto em fala (TTS) com clonagem de voz. Esta política explica, de forma resumida e em português, quais dados tratamos, por que tratamos e como você pode excluí-los — conforme a LGPD (Lei nº 13.709/2018) e os requisitos da Google Play.</p>
+
+    <h2>1. Resumo: sua voz é sua</h2>
+    <ul>
+      <li><strong>Não mantemos</strong> biblioteca de vozes ou áudios gerados em servidor após entregar o resultado.</li>
+      <li><strong>Não compartilhamos nem vendemos</strong> sua voz, seus textos ou seus áudios para publicidade, identificação ou terceiros.</li>
+      <li><strong>Não treinamos</strong> modelos de IA com a sua voz.</li>
+      <li>Vozes salvas em “Minhas Vozes”, histórico e áudios ficam <strong>somente no seu aparelho</strong> até você excluir.</li>
+    </ul>
+
+    <h2>2. Dados que tratamos</h2>
+    <table>
+      <tr><th>Dado</th><th>Para que serve</th><th>Onde fica</th><th>Por quanto tempo</th></tr>
+      <tr><td>E-mail e dados da conta</td><td>Login, saldo e extrato de créditos</td><td>Servidor da conta + app</td><td>Até você pedir exclusão</td></tr>
+      <tr><td>Texto digitado para gerar fala</td><td>Produzir o áudio solicitado</td><td>Processamento transitório</td><td>Descartado após a resposta</td></tr>
+      <tr><td>Amostra de voz (gravação ou arquivo, 5–15s)</td><td>Clonar seu timbre naquele pedido</td><td>Aparelho + processamento transitório</td><td>Descartada após gerar; mantida só se você salvar em “Minhas Vozes” (no aparelho)</td></tr>
+      <tr><td>Vozes salvas, histórico e MP3</td><td>Reutilizar, ouvir e compartilhar</td><td>Somente no aparelho (banco local e arquivos)</td><td>Até você excluir no app</td></tr>
+      <tr><td>Token de acesso ao servidor de voz</td><td>Autenticar o app</td><td>Armazenamento criptografado no aparelho</td><td>Até sair ou trocar o token</td></tr>
+      <tr><td>Pagamento (créditos)</td><td>Recarga via Google Play Billing</td><td>Google Play (não vemos cartão)</td><td>Conforme política do Google</td></tr>
+      <tr><td>Logs técnicos de erro</td><td>Corrigir falhas</td><td>Servidor/app, sem conteúdo de voz</td><td>Curto prazo, agregados</td></tr>
+    </table>
+    <p>A voz pode ser considerada dado biométrico/sensível. Por isso ela é usada <strong>apenas no pedido que você iniciou</strong>, com seu consentimento ao tocar em gerar, e nunca para identificar você.</p>
+
+    <h2>3. Como a clonagem funciona (sem retenção)</h2>
+    <p>Quando você gera fala com voz clonada, a amostra é enviada junto do texto somente para produzir aquele áudio e é descartada em seguida. Nenhum perfil biométrico permanente é criado em servidor. Se você salvar a voz com um nome, ela é gravada apenas na memória do seu celular — desinstalar o app ou excluir a voz apaga o arquivo.</p>
+
+    <h2>4. Terceiros</h2>
+    <ul>
+      <li><strong>Provedor de IA (texto em fala/clonagem em nuvem):</strong> recebe texto e amostra só para gerar o áudio do pedido, sob a política própria do provedor.</li>
+      <li><strong>Google Play Billing:</strong> processa recargas; trata pagamento conforme a política do Google.</li>
+    </ul>
+    <p>Fora isso, não há compartilhamento. Nunca vendemos dados.</p>
+
+    <h2>5. Segurança</h2>
+    <p>Token guardado em armazenamento criptografado, autenticação por Bearer entre app e servidor de voz, e arquivos de voz restritos ao app. Em ambiente de teste em rede local (http), o tráfego fica dentro da sua rede; em produção use sempre conexão segura.</p>
+
+    <h2>6. Seus direitos (LGPD)</h2>
+    <p>Você pode pedir confirmação, acesso, correção, portabilidade e <strong>exclusão</strong> dos seus dados a qualquer momento. Responderemos em até 15 dias. Veja como excluir sozinho no app ou por e-mail em <a href="exclusao.html">Exclusão de dados e conta</a>.</p>
+
+    <h2>7. Crianças</h2>
+    <p>O app não é destinado a menores de 13 anos. Não colete intencionalmente voz de criança sem consentimento do responsável.</p>
+
+    <h2>8. Mudanças</h2>
+    <p>Se esta política mudar, atualizaremos a data de vigência no topo e publicaremos a nova versão neste endereço.</p>
+
+    <div class="cta-row">
+      <a class="btn primary" href="exclusao.html">Pedir exclusão de dados</a>
+      <a class="btn" href="index.html">Voltar ao início</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© <span id="year">2026</span> SuperVoice</span>
+      <nav aria-label="Links legais">
+        <a href="privacidade.html">Política de privacidade</a>
+        <a href="exclusao.html">Exclusão de dados e conta</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

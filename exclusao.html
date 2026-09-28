@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SuperVoice — exclua seus dados e sua conta: instruções no app e formulário por e-mail.">
+  <title>SuperVoice — Exclusão de dados e conta</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="index.html">SuperVoice</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <nav class="nav" id="mainNav" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="privacidade.html">Privacidade</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap section prose">
+    <h1>Exclusão de dados e conta</h1>
+    <p>Você pode apagar seus dados sozinho no app — é imediato. Se quiser excluir também a conta no servidor, use o formulário abaixo. Respondemos em até 15 dias.</p>
+
+    <h2>1. Excluir sozinho no app</h2>
+    <ol class="steps">
+      <li><strong>Apagar uma voz salva:</strong> abra <em>Vozes</em> (ou <em>Minhas Vozes</em>) → toque em Excluir na voz → confirme. Apaga o nome e o arquivo do aparelho.</li>
+      <li><strong>Apagar um áudio gerado:</strong> abra <em>Histórico</em> → toque em Excluir no item → confirme.</li>
+      <li><strong>Descartar amostra antes de salvar:</strong> na tela Gerar, toque em <em>Descartar</em> — nada é guardado.</li>
+      <li><strong>Sair da conta:</strong> abra <em>Conta</em> → <em>Sair</em>. Isso remove o acesso no aparelho; para apagar a conta no servidor, envie o formulário.</li>
+    </ol>
+    <p class="muted">Atenção: desinstalar o app apaga vozes, histórico e arquivos locais, mas não apaga a conta no servidor — para isso use o formulário.</p>
+
+    <h2>2. Pedir exclusão da conta por e-mail</h2>
+    <p>Preencha e toque em <em>Gerar e-mail de exclusão</em>: seu app de e-mail abre com tudo pronto para <a id="contactEmail" href="mailto:granprixtrivia@gmail.com">granprixtrivia@gmail.com</a>. Nada é enviado automaticamente por esta página.</p>
+
+    <form class="form" id="deleteForm" novalidate>
+      <div class="field">
+        <label for="accountEmail">E-mail da conta *</label>
+        <input type="email" id="accountEmail" name="accountEmail" required autocomplete="email" placeholder="voce@exemplo.com">
+      </div>
+      <div class="field">
+        <label for="displayName">Nome (opcional)</label>
+        <input type="text" id="displayName" name="displayName" autocomplete="name" placeholder="Como te identificamos">
+      </div>
+      <div class="field">
+        <label for="scope">O que excluir</label>
+        <select id="scope" name="scope">
+          <option value="conta e todos os dados">Conta e todos os dados</option>
+          <option value="só dados da conta">Só dados da conta (manter app local)</option>
+          <option value="só vozes clonadas">Só vozes clonadas</option>
+          <option value="só histórico">Só histórico de áudios</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="extra">Detalhes (opcional)</label>
+        <textarea id="extra" name="extra" rows="3" placeholder="Ex.: troquei de e-mail, excluir tudo ligado ao e-mail acima"></textarea>
+      </div>
+      <p class="error" id="formError" role="alert" aria-live="polite"></p>
+      <div class="cta-row">
+        <button class="btn primary" type="submit">Gerar e-mail de exclusão</button>
+      </div>
+    </form>
+
+    <h2>3. O que acontece depois</h2>
+    <ul>
+      <li>Excluímos conta, e-mail, amostras vinculadas e registros de consumo ligados a ela.</li>
+      <li>Vozes e áudios no seu aparelho você mesma(o) apaga no app (passo 1) — oriente no e-mail se precisar de ajuda.</li>
+      <li>Confirmamos por e-mail quando terminar, em até 15 dias.</li>
+    </ul>
+
+    <div class="cta-row">
+      <a class="btn" href="privacidade.html">Ler política de privacidade</a>
+      <a class="btn" href="index.html">Voltar ao início</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© <span id="year">2026</span> SuperVoice</span>
+      <nav aria-label="Links legais">
+        <a href="privacidade.html">Política de privacidade</a>
+        <a href="exclusao.html">Exclusão de dados e conta</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
